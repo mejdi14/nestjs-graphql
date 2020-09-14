@@ -13,6 +13,8 @@ import { join } from 'path';
       definitions: { 
         path: join(process.cwd(), 'src/graphql.ts'),
       },
+      introspection: true,
+      playground: true,
     }),
     LaunchModule,
   ],
