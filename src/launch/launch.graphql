@@ -2,6 +2,7 @@ type Launch{
   id: ID!
   site: String
   mission: Mission
+  launch_year: String
   rocket: Rocket
 }
 

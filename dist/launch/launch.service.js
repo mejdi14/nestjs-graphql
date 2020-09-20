@@ -21,6 +21,7 @@ let LaunchService = class LaunchService {
         return {
             id: String(launch.flight_number || 0),
             site: launch.launch_site && launch.launch_site.site_name,
+            launch_year: launch.launch_year,
             mission: {
                 name: launch.mission_name,
                 missionPatchSmall: launch.links.mission_patch_small,
