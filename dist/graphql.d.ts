@@ -6,6 +6,7 @@ export interface Launch {
     id: string;
     site?: string;
     mission?: Mission;
+    launch_year?: string;
     rocket?: Rocket;
 }
 export interface Rocket {

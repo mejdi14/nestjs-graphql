@@ -23,6 +23,8 @@ AppModule = __decorate([
                 definitions: {
                     path: path_1.join(process.cwd(), 'src/graphql.ts'),
                 },
+                introspection: true,
+                playground: true,
             }),
             launch_module_1.LaunchModule,
         ],
