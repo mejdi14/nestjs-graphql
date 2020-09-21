@@ -1,28 +1,42 @@
+scalar Date
 type Launch{
-  id: ID!
-  site: String
-  mission: Mission
-  launch_year: String
-  rocket: Rocket
+    id: ID!
+    site: String
+    mission: Mission
+    launch_year: String
+    launch_date_local: Date
+    launch_date_utc: Date
+    launch_date_unix: Int
+    fire_date_utc: Date
+    fire_date_unix: Int
+    rocket: Rocket
+    links: Link
+}
+
+type Link {
+    article_link: String
+  wikipedia: String
+    video_link: String
+    youtube_id: String
 }
 
 type Rocket {
-  id: ID!
-  name: String
-  type: String
+    id: ID!
+    name: String
+    type: String
 }
 
 type Mission {
-  name: String
-  missionPatch(size: PatchSize): String
+    name: String
+    missionPatch(size: PatchSize): String
 }
 
 enum PatchSize {
-  SMALL
-LARGE
+    SMALL
+    LARGE
 }
 
 type Query {
-  launches: [Launch]!
-  launch(id: ID!): Launch
+    launches: [Launch]!
+    launch(id: ID!): Launch
 }

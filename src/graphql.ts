@@ -16,7 +16,20 @@ export interface Launch {
     site?: string;
     mission?: Mission;
     launch_year?: string;
+    launch_date_local?: Date;
+    launch_date_utc?: Date;
+    launch_date_unix?: number;
+    fire_date_utc?: Date;
+    fire_date_unix?: number;
     rocket?: Rocket;
+    links?: Link;
+}
+
+export interface Link {
+    article_link?: string;
+    wikipedia?: string;
+    video_link?: string;
+    youtube_id?: string;
 }
 
 export interface Rocket {
