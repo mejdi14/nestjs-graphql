@@ -1,7 +1,10 @@
-import { Launch } from "src/graphql";
+import { Launch } from 'src/graphql';
 export interface SpaceX {
     flight_number: number;
     mission_name: string;
+    description: string;
+    website: string;
+    wikipedia: string;
     mission_id: any[];
     upcoming: boolean;
     launch_year: string;
@@ -123,5 +126,8 @@ export interface LaunchModel extends Omit<Launch, 'mission'> {
         name?: string;
         missionPatchSmall: string;
         missionPatchLarge: string;
+        description?: string;
+        website?: string;
+        wikipedia?: string;
     };
 }

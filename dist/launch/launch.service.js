@@ -27,10 +27,14 @@ let LaunchService = class LaunchService {
             launch_date_unix: launch.launch_date_unix,
             fire_date_utc: launch.static_fire_date_utc,
             fire_date_unix: launch.static_fire_date_unix,
+            details: launch.details,
             mission: {
                 name: launch.mission_name,
                 missionPatchSmall: launch.links.mission_patch_small,
                 missionPatchLarge: launch.links.mission_patch,
+                description: launch.description,
+                website: launch.website,
+                wikipedia: launch.wikipedia,
             },
             rocket: {
                 id: launch.rocket.rocket_id,

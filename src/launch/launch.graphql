@@ -11,6 +11,7 @@ type Launch{
     fire_date_unix: Int
     rocket: Rocket
     links: Link
+    details: String
 }
 
 type Link {
@@ -29,6 +30,9 @@ type Rocket {
 type Mission {
     name: String
     missionPatch(size: PatchSize): String
+    description: String
+    website: String
+    wikipedia: String
 }
 
 enum PatchSize {
