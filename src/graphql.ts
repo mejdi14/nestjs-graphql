@@ -23,6 +23,7 @@ export interface Launch {
     fire_date_unix?: number;
     rocket?: Rocket;
     links?: Link;
+    details?: string;
 }
 
 export interface Link {
@@ -41,6 +42,9 @@ export interface Rocket {
 export interface Mission {
     name?: string;
     missionPatch?: string;
+    description?: string;
+    website?: string;
+    wikipedia?: string;
 }
 
 export interface IQuery {
